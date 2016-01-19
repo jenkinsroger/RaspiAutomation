@@ -5,9 +5,23 @@
     xmlns:local="using:HomeAutomation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Width="800" Height="480">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="Black" Width="800" Height="480">
+        <Rectangle Fill="#FF1E1EA8" Stroke="#FF1E1EA8" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" Width="800"/>
+        <Rectangle Fill="#FF1E1EA8" Stroke="#FF1E1EA8" Margin="784,10,0,0" HorizontalAlignment="Left" Width="16" Height="460" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FF1E1EA8" Stroke="#FF1E1EA8" Margin="10,464,0,0" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" Width="790"/>
+        <Rectangle Fill="#FF1E1EA8" Stroke="#FF1E1EA8" HorizontalAlignment="Left" Width="119" Height="464" VerticalAlignment="Top" Margin="0,16,0,0"/>
+        <Rectangle Fill="#FF00D1FF" HorizontalAlignment="Left" Height="37" Margin="-12,56,0,0" Stroke="#FF080808" VerticalAlignment="Top" Width="131" StrokeThickness="3"/>
+        <TextBlock x:Name="HomeText" HorizontalAlignment="Left" Margin="0,56,0,0" TextWrapping="Wrap" Text=" HOME" VerticalAlignment="Top" Height="32" Width="119" FontSize="20" TextAlignment="Center" Tapped="HomeText_Tapped_1"/>
+        <Rectangle Fill="#FF00D1FF" HorizontalAlignment="Left" Height="37" Margin="-12,98,0,0" Stroke="#FF080808" VerticalAlignment="Top" Width="131" StrokeThickness="3"/>
+        <TextBlock x:Name="HomeText_Copy" HorizontalAlignment="Left" Margin="0,98,0,0" TextWrapping="Wrap" Text=" TEMP" VerticalAlignment="Top" Height="34" Width="119" FontSize="20" TextAlignment="Center"/>
+        <Rectangle Fill="#FF00D1FF" HorizontalAlignment="Left" Height="37" Margin="-12,140,0,0" Stroke="#FF080808" VerticalAlignment="Top" Width="131" StrokeThickness="3"/>
+        <TextBlock x:Name="HomeText_Copy1" HorizontalAlignment="Left" Margin="0,140,0,0" TextWrapping="Wrap" Text=" LIGHT" VerticalAlignment="Top" Height="37" Width="119" FontSize="20" TextAlignment="Center" Tapped="btnLightTxt_Tapped"/>
+        <Rectangle Fill="#FF1E1EA8" Stroke="#FF1E1EA8" Height="37" VerticalAlignment="Top" Margin="119,140,0,0" HorizontalAlignment="Left" Width="671"/>
+        <TextBlock x:Name="txtDate" HorizontalAlignment="Left" Margin="119,16,0,0" TextWrapping="Wrap" Text="TUESDAY, JANUARY 15 2016" VerticalAlignment="Top" Width="667" Foreground="#FFFDFDFD" TextAlignment="Center" FontSize="26.667"/>
+        <TextBlock x:Name="txtTime" HorizontalAlignment="Left" Margin="119,61,0,0" TextWrapping="Wrap" Text="05:36 PM" VerticalAlignment="Top" Width="665" Foreground="#FFFDFDFD" TextAlignment="Center" FontSize="46.667"/>
 
+        <Frame x:Name="contentFrame" Width="655" Height="277" Margin="124,182,21,21"/>
     </Grid>
 </Page>

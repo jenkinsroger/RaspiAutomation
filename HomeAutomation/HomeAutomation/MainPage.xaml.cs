@@ -22,9 +22,39 @@ namespace HomeAutomation
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private DispatcherTimer _Datectimer = new DispatcherTimer();
+
         public MainPage()
         {
             this.InitializeComponent();
+            contentFrame.Navigate(typeof(HomePage));
+
+
+            _Datectimer.Interval = TimeSpan.FromSeconds(1);
+            _Datectimer.Tick += _Datectimer_Tick;
+            _Datectimer.Start();
+
+        }
+
+        private async void _Datectimer_Tick(object sender, object e)
+        {
+            txtDate.Text = string.Format("{0:dddd, MMMM d, yyyy}", DateTime.Now);
+            txtTime.Text = string.Format("{0:hh:mm:ss tt}", DateTime.Now);
+        }
+
+        private void HomeText_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
+
+        private void btnLightTxt_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(MainLightPage));
+        }
+
+        private void HomeText_Tapped_1(object sender, TappedRoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(HomePage));
         }
     }
 }
