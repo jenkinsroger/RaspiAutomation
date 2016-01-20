@@ -64,7 +64,8 @@ namespace HomeAutomation
 
         private void btnCFader_Click(object sender, RoutedEventArgs e)
         {
-            LedStrip.ColorsFade();
+            //LedStrip.ColorsFade();
+            LedStrip.NewColorFader();
         }
 
         private void btnFader_Click(object sender, RoutedEventArgs e)

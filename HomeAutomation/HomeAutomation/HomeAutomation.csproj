@@ -103,6 +103,7 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LightColors.cs" />
     <Compile Include="MainLightPage.xaml.cs">
       <DependentUpon>MainLightPage.xaml</DependentUpon>
     </Compile>

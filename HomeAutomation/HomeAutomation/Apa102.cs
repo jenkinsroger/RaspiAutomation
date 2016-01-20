@@ -341,5 +341,35 @@ namespace HomeAutomation
                 }
             });
         }
+
+        public void NewColorFader()
+        {
+            int Brightness = 120;
+            int CurrentCycle = 0;
+            int NumberOfCycles = 10;
+
+            double hue = 0;
+            double sat = 1;
+            double value = 1;
+
+            Task.Run(() =>
+            {
+                //while (true)
+                //{
+                    pixelColors = new List<Color>();
+
+                    for (int i = 0; i < MainLightPage.spi.PixelCount; i++)
+                    {
+
+                        Color NewColor = LightColors.ColorFromHSV(hue, sat, value);
+                        pixelColors.Add(Color.FromArgb((byte)Brightness, (byte)NewColor.R, (byte)NewColor.G, (byte)NewColor.B));
+
+                        hue += 5;
+                    }
+                    SPIclass.SendPixels(pixelColors);
+                    //Task.Delay(30).Wait();
+                //}
+            });
+        }
     }
 }
