@@ -10,17 +10,20 @@ namespace HomeAutomation
     public class Apa102
     {
         List<Color> pixelColors = new List<Color>();
+        public static SPIclass spi = MainPage.spi;
 
         public static bool CyclonRun = false;
         public static bool ColorFadeRun = false;
         public static bool TwinkleRun = false;
         public static bool fadeRun = false;
         public static bool ColorShiftRun = false;
+
+
         public void AllOneColor(Color Color)
         {
             pixelColors = new List<Color>();
 
-            for (int i = 0; i < MainLightPage.spi.PixelCount; i++) 
+            for (int i = 0; i < spi.PixelCount; i++) 
             {
                 pixelColors.Add(Color.FromArgb(255, Color.R,Color.G,Color.B));
             }
@@ -43,7 +46,7 @@ namespace HomeAutomation
                     {
                         pixelColors = new List<Color>();
 
-                        for (int i = 0; i < MainLightPage.spi.PixelCount; i++)
+                        for (int i = 0; i < spi.PixelCount; i++)
                         {
                             pixelColors.Add(Color.FromArgb((byte)Brightness, color.R, color.G, color.B));
                         }
@@ -57,7 +60,7 @@ namespace HomeAutomation
                     {
                         pixelColors = new List<Color>();
 
-                        for (int i = 0; i < MainLightPage.spi.PixelCount; i++)
+                        for (int i = 0; i < spi.PixelCount; i++)
                         {
                             pixelColors.Add(Color.FromArgb((byte)Brightness, color.R, color.G, color.B));
                         }
@@ -76,7 +79,7 @@ namespace HomeAutomation
         {
             List<Color> pixelColors = new List<Color>();
 
-            for (int i = 0; i < MainLightPage.spi.PixelCount / 6; i++)
+            for (int i = 0; i < spi.PixelCount / 6; i++)
             {
                 pixelColors.Add(Color.FromArgb(60, 255, 0, 0));     // Red
                 pixelColors.Add(Color.FromArgb(60, 0, 255, 0));     // Green
@@ -100,7 +103,7 @@ namespace HomeAutomation
                     Random Brightness = new Random();
                     pixelColors = new List<Color>();
 
-                    for (int i = 0; i < MainLightPage.spi.PixelCount; i++)
+                    for (int i = 0; i < spi.PixelCount; i++)
                     {
                         pixelColors.Add(Color.FromArgb((byte)Brightness.Next(0,255), color.R, color.G, color.B));
                     }
@@ -134,7 +137,7 @@ namespace HomeAutomation
                 {
                     pixelColors = new List<Color>();
 
-                    for (int i = 0; i < MainLightPage.spi.PixelCount; i++)
+                    for (int i = 0; i < spi.PixelCount; i++)
                     {
                         pixelColors.Add(Color.FromArgb((byte)Brightness, (byte)red, (byte)green, (byte)blue));
                     }
@@ -196,13 +199,13 @@ namespace HomeAutomation
             {
                 while (CyclonRun)
                 {
-                    while ((location + top) < MainLightPage.spi.PixelCount)
+                    while ((location + top) < spi.PixelCount)
                     {
-                        if ((location + top) == (MainLightPage.spi.PixelCount - 1)) break;
+                        if ((location + top) == (spi.PixelCount - 1)) break;
 
                         pixelColors = new List<Color>();
 
-                        for (int i = 0; i < MainLightPage.spi.PixelCount; i++)
+                        for (int i = 0; i < spi.PixelCount; i++)
                         {
                             pixelColors.Add(Color.FromArgb((byte)Brightness, (byte)red, (byte)green, (byte)blue));
                         }
@@ -216,13 +219,13 @@ namespace HomeAutomation
                         location++;
                     }
 
-                    while ((location + botton) < MainLightPage.spi.PixelCount)
+                    while ((location + botton) < spi.PixelCount)
                     {
                         if ((location + botton) == 0) break;
 
                         pixelColors = new List<Color>();
 
-                        for (int i = 0; i < MainLightPage.spi.PixelCount; i++)
+                        for (int i = 0; i < spi.PixelCount; i++)
                         {
                             pixelColors.Add(Color.FromArgb((byte)Brightness, (byte)red, (byte)green, (byte)blue));
                         }
@@ -242,7 +245,7 @@ namespace HomeAutomation
         public void ColorShift()
         {
             int location = 0;
-            int pixelcount = MainLightPage.spi.PixelCount;
+            int pixelcount = spi.PixelCount;
 
             int Brightness = 255;
             int red = 0;
@@ -253,7 +256,7 @@ namespace HomeAutomation
 
             pixelColors = new List<Color>();
 
-            for (int i = 0; i < MainLightPage.spi.PixelCount; i++)
+            for (int i = 0; i < spi.PixelCount; i++)
             {
                 pixelColors.Add(Color.FromArgb((byte)Brightness, (byte)red, (byte)green, (byte)blue));
             }
@@ -358,7 +361,7 @@ namespace HomeAutomation
                 //{
                     pixelColors = new List<Color>();
 
-                    for (int i = 0; i < MainLightPage.spi.PixelCount; i++)
+                    for (int i = 0; i < spi.PixelCount; i++)
                     {
 
                         Color NewColor = LightColors.ColorFromHSV(hue, sat, value);

@@ -23,11 +23,14 @@ namespace HomeAutomation
     public sealed partial class MainPage : Page
     {
         private DispatcherTimer _Datectimer = new DispatcherTimer();
+        public static SPIclass spi = new SPIclass();
 
         public MainPage()
         {
             this.InitializeComponent();
             contentFrame.Navigate(typeof(HomePage));
+            StaticPropertiescs.SetupDTH11();
+            spi.StartSPI();
 
 
             _Datectimer.Interval = TimeSpan.FromSeconds(1);

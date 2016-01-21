@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="HomeAutomation.MainLightPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HomeAutomation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="655" Height="277">
+
+    <Grid Background="Black">
+        <Button x:Name="btnFader" Content="FADER" HorizontalAlignment="Left" Margin="482,47,0,0" VerticalAlignment="Top" Foreground="White" Background="Red" Width="163" Click="btnFader_Click"/>
+        <Button x:Name="btnRainbow" Content="RAINBOW" HorizontalAlignment="Left" Margin="482,84,0,0" VerticalAlignment="Top" Foreground="White" Background="Red" Width="163" Click="btnRainbow_Click"/>
+        <Button x:Name="btnCFader" Content="COLOR FADE" HorizontalAlignment="Left" Margin="482,10,0,0" VerticalAlignment="Top" Foreground="White" Background="Red" Width="163" Click="btnCFader_Click"/>
+        <Button x:Name="btnTwinkle" Content="TWINKLE" HorizontalAlignment="Left" Margin="482,121,0,0" VerticalAlignment="Top" Foreground="White" Background="Red" Width="163" Click="btnTwinkle_Click"/>
+        <Button x:Name="btnCylon" Content="CYLON" HorizontalAlignment="Left" Margin="482,158,0,0" VerticalAlignment="Top" Foreground="White" Background="Red" Width="163" Click="btnCylon_Click"/>
+        <Button x:Name="btnColorShift" Content="COLOR SHIFT" HorizontalAlignment="Left" Margin="482,195,0,0" VerticalAlignment="Top" Foreground="White" Background="Red" Width="163" Height="32" Click="btnColorShift_Click"/>
+        <Button x:Name="btnStopAnimation" Content="STOP ALL ANIMATIONS" HorizontalAlignment="Left" Margin="482,239,0,0" VerticalAlignment="Top" Foreground="White" Background="Red" Width="163" FontSize="12" Click="btnStopAnimation_Click"/>
+        <Button x:Name="btnColor1" Content="" HorizontalAlignment="Left" Margin="22,47,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Red" Click="btnColorSelect"/>
+        <Button x:Name="btnColor2" Content="" HorizontalAlignment="Left" Margin="77,47,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="OrangeRed" Click="btnColorSelect"/>
+        <Button x:Name="btnColor3" Content="" HorizontalAlignment="Left" Margin="132,47,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="DarkOrange" Click="btnColorSelect"/>
+        <Button x:Name="btnColor4" Content="" HorizontalAlignment="Left" Margin="187,47,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="DeepPink" Click="btnColorSelect"/>
+        <Button x:Name="btnColor5" Content="" HorizontalAlignment="Left" Margin="242,47,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Orchid" Click="btnColorSelect"/>
+        <Button x:Name="btnColor6" Content="" HorizontalAlignment="Left" Margin="297,47,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="BlueViolet" Click="btnColorSelect"/>
+        <Button x:Name="btnColor7" Content="" HorizontalAlignment="Left" Margin="22,103,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="MediumPurple" Click="btnColorSelect"/>
+        <Button x:Name="btnColor8" Content="" HorizontalAlignment="Left" Margin="77,103,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Yellow" Click="btnColorSelect"/>
+        <Button x:Name="btnColor9" Content="" HorizontalAlignment="Left" Margin="132,103,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Goldenrod" Click="btnColorSelect"/>
+        <Button x:Name="btnColor10" Content="" HorizontalAlignment="Left" Margin="187,103,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Chartreuse" Click="btnColorSelect"/>
+        <Button x:Name="btnColor12" Content="" HorizontalAlignment="Left" Margin="297,103,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="LimeGreen" Click="btnColorSelect"/>
+        <Button x:Name="btnColor11" Content="" HorizontalAlignment="Left" Margin="242,102,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Lime" Click="btnColorSelect"/>
+        <Button x:Name="btnColor13" Content="" HorizontalAlignment="Left" Margin="22,158,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="LightSeaGreen" Click="btnColorSelect"/>
+        <Button x:Name="btnColor14" Content="" HorizontalAlignment="Left" Margin="77,158,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Cyan" Click="btnColorSelect"/>
+        <Button x:Name="btnColor15" Content="" HorizontalAlignment="Left" Margin="132,158,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="DodgerBlue" Click="btnColorSelect"/>
+        <Button x:Name="btnColor16" Content="" HorizontalAlignment="Left" Margin="187,158,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="Blue" Click="btnColorSelect"/>
+        <Button x:Name="btnColor17" Content="" HorizontalAlignment="Left" Margin="297,158,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="White" Click="btnColorSelect"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="392,47,0,0" VerticalAlignment="Top" Width="61" Background="White" Orientation="Vertical" Height="220" TickFrequency="10" StepFrequency="10" IsEnabled="False"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="368,10,0,0" TextWrapping="Wrap" Text="BRIGHTNESS" VerticalAlignment="Top" Foreground="White"/>
+
+    </Grid>
+</Page>

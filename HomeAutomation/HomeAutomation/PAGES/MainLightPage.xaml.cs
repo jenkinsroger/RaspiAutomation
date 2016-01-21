@@ -22,7 +22,7 @@ namespace HomeAutomation
     /// </summary>
     public sealed partial class MainLightPage : Page
     {
-        public static SPIclass spi = new SPIclass();
+        
         public List<NamedColor> ColorsNamed = new List<NamedColor>();
         public Apa102 LedStrip = new Apa102();
 
@@ -30,7 +30,6 @@ namespace HomeAutomation
         {
             this.InitializeComponent();
 
-            spi.StartSPI();
         }
 
         private void btnRainbow_Click(object sender, RoutedEventArgs e)

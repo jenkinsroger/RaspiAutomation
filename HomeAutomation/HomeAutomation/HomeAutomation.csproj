@@ -89,37 +89,38 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Content Include="ApplicationInsights.config">
+    <Content Include="OTHER\ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="project.json" />
+    <None Include="OTHER\project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apa102.cs" />
+    <Compile Include="CLASSES\Apa102.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DHT11Class.cs" />
-    <Compile Include="HomePage.xaml.cs">
+    <Compile Include="CLASSES\DHT11Class.cs" />
+    <Compile Include="PAGES\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LightColors.cs" />
-    <Compile Include="MainLightPage.xaml.cs">
+    <Compile Include="CLASSES\LightColors.cs" />
+    <Compile Include="PAGES\MainLightPage.xaml.cs">
       <DependentUpon>MainLightPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="PAGES\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NamedColor.cs" />
+    <Compile Include="CLASSES\NamedColor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SPIclass.cs" />
-    <Compile Include="UpdateTimeClass.cs" />
+    <Compile Include="CLASSES\SPIclass.cs" />
+    <Compile Include="CLASSES\StaticPropertiescs.cs" />
+    <Compile Include="CLASSES\UpdateTimeClass.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AppxManifest Include="Package.appxmanifest">
+    <AppxManifest Include="OTHER\Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="HomeAutomation_TemporaryKey.pfx" />
+    <None Include="OTHER\HomeAutomation_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
@@ -136,15 +137,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="HomePage.xaml">
+    <Page Include="PAGES\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainLightPage.xaml">
+    <Page Include="PAGES\MainLightPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="PAGES\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -162,6 +163,7 @@
       <HintPath>..\..\..\RaspPiPlay\RaspPiPlay\RaspPiPlay\bin\ARM\Debug\Sensors.Dht.winmd</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
