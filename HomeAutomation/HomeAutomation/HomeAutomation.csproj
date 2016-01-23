@@ -92,7 +92,7 @@
     <Content Include="OTHER\ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="OTHER\project.json" />
+    <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLASSES\Apa102.cs" />
@@ -100,6 +100,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="CLASSES\DHT11Class.cs" />
+    <Compile Include="CommunicationScreen.xaml.cs">
+      <DependentUpon>CommunicationScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PAGES\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -115,6 +118,7 @@
     <Compile Include="CLASSES\SPIclass.cs" />
     <Compile Include="CLASSES\StaticPropertiescs.cs" />
     <Compile Include="CLASSES\UpdateTimeClass.cs" />
+    <Compile Include="SerialCommunicationClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="OTHER\Package.appxmanifest">
@@ -137,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CommunicationScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PAGES\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,7 +164,8 @@
     </SDKReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Nist">
+    <Reference Include="Nist, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Downloads\Nist\bin\Debug\Nist.dll</HintPath>
     </Reference>
     <Reference Include="Sensors.Dht">
