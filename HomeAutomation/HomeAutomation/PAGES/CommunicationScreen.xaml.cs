@@ -28,7 +28,8 @@ namespace HomeAutomation
         {
             this.InitializeComponent();
 
-            _Datectimer.Interval = TimeSpan.FromSeconds(100);
+
+            _Datectimer.Interval = TimeSpan.FromSeconds(1);
             _Datectimer.Tick += _Datectimer_Tick;
             _Datectimer.Start();
         }

@@ -100,7 +100,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="CLASSES\DHT11Class.cs" />
-    <Compile Include="CommunicationScreen.xaml.cs">
+    <Compile Include="NetworkClass.cs" />
+    <Compile Include="PAGES\CommunicationScreen.xaml.cs">
       <DependentUpon>CommunicationScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="PAGES\HomePage.xaml.cs">
@@ -118,7 +119,7 @@
     <Compile Include="CLASSES\SPIclass.cs" />
     <Compile Include="CLASSES\StaticPropertiescs.cs" />
     <Compile Include="CLASSES\UpdateTimeClass.cs" />
-    <Compile Include="SerialCommunicationClass.cs" />
+    <Compile Include="CLASSES\SerialCommunicationClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="OTHER\Package.appxmanifest">
@@ -141,7 +142,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CommunicationScreen.xaml">
+    <Page Include="PAGES\CommunicationScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

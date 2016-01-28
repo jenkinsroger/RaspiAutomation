@@ -27,14 +27,20 @@ namespace HomeAutomation
     {
         private DispatcherTimer _Datectimer = new DispatcherTimer();
         public static SPIclass spi = new SPIclass();
+        public static DateTime newdatetime = new DateTime();
+
 
         public MainPage()
         {
+            
+
             this.InitializeComponent();
-            contentFrame.Navigate(typeof(HomePage));
-                        
-            StaticPropertiescs.SetupDTH11();
-            spi.StartSPI();
+            contentFrame.Navigate(typeof(CommunicationScreen));
+
+            UpdateTimeClass.getdata();
+
+            //StaticPropertiescs.SetupDTH11();
+            //spi.StartSPI();
 
 
             _Datectimer.Interval = TimeSpan.FromSeconds(1);
@@ -47,11 +53,6 @@ namespace HomeAutomation
         {
             txtDate.Text = string.Format("{0:dddd, MMMM d, yyyy}", DateTime.Now);
             txtTime.Text = string.Format("{0:hh:mm:ss tt}", DateTime.Now);
-        }
-
-        private void HomeText_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-
         }
 
         private void btnLightTxt_Tapped(object sender, TappedRoutedEventArgs e)
